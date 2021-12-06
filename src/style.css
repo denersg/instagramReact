@@ -1,0 +1,300 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+}
+
+.header{
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.menu-topo{
+    width: 935px;
+    height: 54px;
+    padding: 0 12px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header input{
+    height: 24px;
+    width: 215px;
+    
+    position: absolute;
+    left: 575px;
+    top: 13px;
+
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+
+    background-color: #fafafa;
+}
+
+.header input::placeholder{
+    text-align: center;
+}
+
+.insta-logo, .send, .compass, .heart, .person{
+    height: 20px;
+    width: 20px;
+}
+
+.insta-logo{
+    /* background-color: pink; */
+    height: 20px;
+    width: 20px;
+    
+    position: absolute;
+    left: 1,38px;
+    top: 1,38px;
+}
+
+.linha-vertical{
+    height: 22px;
+    width: 1px;
+    
+    position: absolute;
+    top: 15px;
+    left: 247px;
+    
+    background: #dbdbdb;
+}
+
+.insta-name{
+    /* border: 1px solid orange; */
+    
+    position: absolute;
+    top: 15px;
+    left: 258px;
+}
+
+.nav{
+    color: #000;
+    font-size: 20px;
+}
+
+.send{
+    /* background-color: red; */
+
+    position: absolute;
+    top: 18px;
+    right: 344.06px;
+}
+
+.compass{
+    /* background-color: blue; */
+
+    position: absolute;
+    top: 18px;
+    right: 306.46px;
+}
+
+.heart{
+    /* background-color: green; */
+
+    position: absolute;
+    top: 18px;
+    right: 260.75px;
+}
+
+.person{
+    /* background-color: purple; */
+
+    position: absolute;
+    top: 18px;
+    right: 223.21px;
+}
+
+.conteudo{
+    width: 935px;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 0 auto;
+    margin-top: 88px;
+}
+
+.feed{
+    width: 614px;
+}
+
+.post{
+    position: relative;
+
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    height: 749px;
+
+    margin-bottom: 60px;
+}
+
+.post img{
+    width: 612px;
+    height: 612px;
+
+    position: absolute;
+    top: 61px;
+}
+
+.miniImagem img{
+    width: 32px;
+    height: 32px;
+
+    position: absolute;
+    top: 15px;
+    left: 17px;
+}
+
+.post span{
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    top: 21px;
+    left: 64px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.stories{
+    display: flex;
+    /*Este atributo permite inserir 14px de espaço
+     *entre os elementos, MENOS NO ÚLTIMO*/
+    gap: 14px;
+
+    background-color: #fff;
+    
+    margin-bottom: 24px;
+    padding: 14px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+
+    /*Permite esconder os elementos q/ escaparem da tela*/
+    overflow: hidden;
+    
+    position: relative;
+}
+
+.story{
+    width: 66px;
+    height: 86px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.story .thumbnail{
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url(arquivos-instagram/stories_background.jpg);
+    /*Fazendo assim, ele vai 'cobrir' (cover)
+    toda a extensão de 64x64 do width e do height*/
+    background-size: cover;
+}
+
+.story span{
+    width: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #262626;
+}
+
+.thumbnail img{
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+}
+
+.botao-scroll{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 26px;
+    /*Isso é o q/ vai dar a sombra do botão scroll*/
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.menu-lateral{
+    width: 300px;
+    height: 400px;
+    
+    background-color: green;
+
+    position: absolute;
+    top: 88px;
+    left: 850px;
+}
+
+@media(max-width: 935px){
+    .menu-lateral{
+        display: none;
+    }
+
+    .conteudo{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 614px){
+    .menu-topo, .conteudo, .feed{
+        width: 100%;
+    }
+
+    .menu-topo{
+        justify-content: center;
+    }
+
+    .menu-topo input, .menu-topo .nav, .botao-scroll{
+        display: none;
+    }
+
+    .stories{
+        background: none;
+        border: none;
+        margin-bottom: 8px;
+    }
+
+    .conteudo{
+        margin-top: 48px;
+    }
+}
